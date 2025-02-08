@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void main() {
+    int mid,h,l,e;
+    int n;
+    int mid1;
+   
+   
+    printf("enter the size of the n:");
+    scanf("%d",&n);
+   
+   
+    printf("\n");
+    l = 0;
+    h = n;
+   
+    while(l<h)
+    {
+        mid = (l+h)/2;
+        mid1=mid*mid;
+        if(mid1 ==n )
+        {
+         printf("square root of %d is %d",n,mid);
+         break;
+        }
+        else if (mid1<n)
+        {
+           l = mid;
+        }
+        else {
+            h = mid;
+        }
+       
+       
+    }
+   
+   
+}
