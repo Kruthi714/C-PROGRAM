@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+     int n,i,j;
+    int a[5];
+   
+    printf("enter the value of n: ");\
+    scanf("%d\n",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("array elements are: ");
+    for(i=0;i<n;i++)
+    {
+       printf("%d\t",a[i]);
+    }
+    printf("\n");
+
+    printf("reverse of array is: ");
+     for(i=n-1;i>=0;i--)
+    {
+       printf("%d\t",a[i]);
+    }
+   
+   
+ 
+   
+}
