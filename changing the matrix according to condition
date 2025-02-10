@@ -1,0 +1,66 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int n,i,j;
+    int a[50][50];
+    printf("enter the number: ");
+    scanf("%d",&n);
+    printf("enter the matrix:\n");
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            printf("%d\t",a[i][j]);
+
+        }
+        printf("\n");
+    }
+    int k=3;
+    int temp;
+     for(i=1;i<n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+          temp=a[i][j];
+          a[i][j]=a[k][j];
+          a[k][j]=temp;
+        }
+        k--;
+    }
+   printf("updated matrix:\n");
+
+    printf("\n");
+int m=3;
+    int temp1;
+     for(i=1;i<n;i++)
+    {
+        for(j=2;j<=n;j++)
+        {
+          temp1=a[i][j];
+          a[i][j]=a[j][i];
+          a[j][i]=temp1;
+
+        }
+
+        m--;
+    }
+    printf("\n");
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            printf("%d\t",a[i][j]);
+
+        }
+        printf("\n");
+    }
+
+}
