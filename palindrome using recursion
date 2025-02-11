@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+#include<stdbool.h>
+int rev(int n,int r)
+{
+    if(n==0)
+    {
+        return r;
+    }
+    
+    return rev(n/10,r*10+n%10);
+    
+}
+bool palindrome(int n)
+{
+    if(n<0)
+    {
+        return false;
+    }
+    else
+    {
+    return n==rev(n,0);
+    }
+}
+
+int main() {
+   
+int n,res;
+printf("enter the n: ");
+scanf("%d",&n);
+res=palindrome(n);
+if(res==true)
+{
+    printf("it is a palindrome");
+}
+else
+{
+    printf("it is not a palindrome");
+}
+    return 0;
+}
